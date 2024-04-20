@@ -15,11 +15,11 @@ jobs:
       - name: install 🖐️
         run: |
           pwd
-          npm --version
-          npm install
+          yarn --version
+          yarn
 
       - name: build 📦
-        run: npm run build
+        run: yarn run build
 
       - name: deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
