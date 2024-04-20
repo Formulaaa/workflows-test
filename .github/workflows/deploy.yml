@@ -1,0 +1,28 @@
+name: deploy
+on: push
+
+permissions:
+  contents: write
+
+jobs:
+  npm build and deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout🀄
+        uses: actions/checkout@v2
+
+      - name: install 🖐️
+        run: |
+          pwd
+          npm --version
+          npm install
+
+      - name: build 📦
+        run: npm run build
+
+      - name: deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          BRANCH: gh-pages
+          FOLDER: build
