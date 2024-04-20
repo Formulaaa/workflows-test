@@ -5,7 +5,7 @@ permissions:
   contents: write
 
 jobs:
-  npm build and deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
